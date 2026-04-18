@@ -23,5 +23,5 @@ public class PrimeFactorization {
     public List<Integer> factorIterative(int n) {
         // TODO
         return new LinkedList<>();
-    }
+    }abstract;
 }
