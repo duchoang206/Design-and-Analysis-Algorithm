@@ -8,7 +8,10 @@ public class GCD {
      */
     public int findGcdRecursive(int a, int b) {
         // TODO
-        return 0;
+        if ( b==0) return a;
+        else {
+           return findGcdRecursive(a, a%b);
+        }
     }
 
     /**
@@ -18,7 +21,14 @@ public class GCD {
      * @return UCLN của a và b
      */
     public int findGcdIterative(int a, int b) {
-        // TODO
-        return 0;
+        if ( b==0) return a;
+        else {
+            while ( b!=0 ) {
+                int temp =b;
+                b = a%b;
+                a =temp;
+            }
+            return a;
+        }
     }
 }
