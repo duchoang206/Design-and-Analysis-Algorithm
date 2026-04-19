@@ -12,14 +12,13 @@ public class TowerOfHanoiSolver {
      * @param aux  cọc trung gian
      */
     public void solve(int n, char from, char to, char aux) {
-        if ( n ==1 ) {
-            System.out.println("Di chuyen 1 dia tu "+from+"sang"+to);
+        if ( n==1 ) {
+            System.out.println(from +"->"+ to);
         }
         else {
-            solve( n-1 , from,aux,to);
-            System.out.println("di chuyen dia " +n+"tu"+from+"sang"+to);
-            solve( n-1 , aux,to,from);
-        }
+            solve(n-1, from, aux, to);
+            System.out.println("di chuyen"+n+from+"->"+to);
+            solve(n-1, aux, to, from);
+        }   
     }
 }
-   
