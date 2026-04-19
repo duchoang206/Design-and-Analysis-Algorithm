@@ -9,17 +9,18 @@ public class NumberOfIslands {
     public int countIslands(int[][] grid) {
         int soHang = grid.length;
         int soCot = grid[0].length;
-        int count =0;
-        if ( grid = null || gird.length == 0) {
+        int count = 0;
+        if ( grid == null || grid.length == 0) {
             return 0;
         }
         for ( int i = 0; i < soHang ; i++ ) {
             for ( int j =0 ; j < soCot ; j++) {
-                if ( grid[r][c] ==1) {
-                    dfs(grid, r, c);
+                if ( grid[i][j] ==1) {
+                    count++;
+                    dfs(grid, i, j);
                 }
             
-            }count++;
+            }
         }
         return count;
     }
@@ -34,7 +35,7 @@ public class NumberOfIslands {
     private void dfs(int[][] grid, int r, int c) {
         int soHang = grid.length;
         int soCot = grid[0].length;
-        if ( r <0 || c< 0 || r > soHang || c > soCot || grid[r][c] == 0) {
+        if ( r <0 || c< 0 || r >= soHang || c >= soCot || grid[r][c] == 0) {
             return;
         }
         grid[r][c] = 0;
