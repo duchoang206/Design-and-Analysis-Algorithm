@@ -7,8 +7,12 @@ public class DecimalToBinary {
      * @return biểu diễn nhị phân của n dưới dạng chuỗi
      */
     public String convertRecursive(int n) {
-        // TODO
-        return "";
+        if ( n ==0 ) return "0";
+        if ( n ==1 ) return "1";
+        else {
+            return convertRecursive(n/2) + String.valueOf(n&2);
+        }
+        
     }
 
     /**
@@ -18,7 +22,12 @@ public class DecimalToBinary {
      * @return biểu diễn nhị phân của n dưới dạng chuỗi
      */
     public String convertIterative(int n) {
-        // TODO
-        return "";
+        String nhiphan = "";
+        while ( n > 0) {
+            nhiphan = (n%2) + nhiphan;
+            n =n/2;
+        }
+
+        return nhiphan;
     }
 }
